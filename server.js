@@ -35,7 +35,7 @@ const todoList = [
     {
       id: 5,
       title: "Call grandma",
-      description: "Wish her a happy birthday",
+      description: "Wish her a sweet happy birthday",
       completed: false,
     },
     {
@@ -53,7 +53,7 @@ const todoList = [
     {
       id: 8,
       title: "Attend dentist appointment",
-      description: "Get a dental checkup at 3:00 PM",
+      description: "Get a dental checkup at 2:00 PM",
       completed: false,
     },
     {
@@ -150,7 +150,7 @@ const todoList = [
       id: 24,
       title: "Create a budget",
       description: "Track income and expenses for the month",
-      completed: false,
+      completed: true,
     },
     {
       id: 25,
@@ -223,7 +223,7 @@ const todoList = [
       return;
     }
     response.status(404).json({ msg: "Todo not found" });
-  });
+  })
 
   app.delete("/todoList/:id", (request, response) => {
     const todoIndex = todoList.findIndex((todo) => (todo.id = request.params.id));
